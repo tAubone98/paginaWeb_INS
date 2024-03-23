@@ -19,6 +19,7 @@ header{
     position: sticky;
     top: 0;
     z-index: 5;
+    height: auto;
 
     border-style: solid;
     border-color: transparent;
@@ -53,10 +54,20 @@ nav{
     height: 100%;
 }
 .logo h2{
+    font-size: 1.75rem;
     margin-left: 8%;
     justify-self: end;
     text-wrap:balance;
     color: rgb(10, 10, 10);
+}
+.logo h2::first-letter{
+    color: #ED3237;
+}
+.letraN{
+    color: #0F62AC;
+}
+.letraS{
+    color: #05A155;
 }
 ul{
     list-style-type: none;
@@ -71,11 +82,6 @@ ul{
 .accesos li a{
     text-decoration: none;
     color: rgb(10, 10, 10);
-}
-.menu-responsive{
-    visibility: hidden;
-    aspect-ratio: 1/1;
-    width: 30px;
 }
 /* PÁGINA PRINCIPAL */
                                                     /* Sección de bienvenida */
@@ -369,18 +375,12 @@ footer{
     border-radius: 1.25rem;
     border: .125rem solid rgb(100, 100, 100);
 }
-.icon-mapa{
-    grid-column: 1;
-    grid-row: 1/3;
-    justify-self: end;
-    visibility: hidden;
-}
 .tel-horario{
     grid-area: tel-horario;
     width: 90%;
-    height: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: end;
     align-items: flex-end;
 }
 .tel{
@@ -388,13 +388,15 @@ footer{
     align-items: center;
 }
 .tel img{
+    grid-area:tel;
     margin-right: 5%;
 }
 .tel p{
-    font-size: 1.125rem;
+    font-size: 1rem;
     text-wrap: nowrap;
 }
 .horario{
+    grid-area:horario;
     display: flex;
     align-items: center;
 }
@@ -402,19 +404,23 @@ footer{
     margin-right: 5%;
 }
 .horario div p{
-    font-size: 1.125rem;
+    font-size: 1rem;
     text-wrap: nowrap;
 }
 .icons{
     grid-area: icons;
     width: 90%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding-top: 1.65%;
 
     border-style: solid; 
     border-color:rgb(110, 110, 110);
     border-width: .25rem 0 0 0;
+}
+.icon-mapa{
+    visibility: hidden;
+    display: none;
 }
 .icons-img{
     width: 1.875rem;
@@ -451,25 +457,25 @@ footer{
 }
 .equipo-container summary{
     font-size: 1.5;
-    font-weight: 400;
-    text-align: center;
-    margin: 2% 0;
+    font-weight: 600;
+    text-align: justify;
+    margin: 2% 0 2% 5%;
 }
 .equipo-container h3{
     font-size: 1.25rem;
-    font-weight: 200;
+    font-weight: 400;
     text-align: center;
     margin: .3125rem 0;
 }
 .equipo-container h4{
     font-size: 1rem;
-    font-weight: 100;
+    font-weight: 300;
     text-align: center;
     text-decoration: underline;
 }
 .equipo-container p{
     font-size: 1rem;
-    font-weight: 100;
+    font-weight: 300;
     text-align: justify;
     margin: 0 30%;
 }
@@ -513,27 +519,27 @@ footer{
     background-clip: content-box, border-box;
 }
 .acuerdos-container summary{
-    font-size: 1.5;
-    font-weight: 400;
+    font-size: 1.5rem;
+    font-weight: 600;
     text-align: justify;
     margin: 2% 0 2% 5%;
 }
 .acuerdos-container h3{
     font-size: 1.25rem;
-    font-weight: 200;
+    font-weight: 400;
     text-align: justify;
     margin: .3125rem 0 .3125rem 1.25rem;
 }
 .acuerdos-container h4{
     font-size: 1rem;
-    font-weight: 100;
+    font-weight: 300;
     text-align: justify;
     text-decoration: underline;
     margin-left: 2.5rem;
 }
 .acuerdos-container p{
     font-size: 1rem;
-    font-weight: 100;
+    font-weight: 300;
     text-align: justify;
     margin: .5rem 2.5rem;
 }
@@ -542,7 +548,7 @@ footer{
 }
 .acuerdos-lista li{
     font-size: 1rem;
-    font-weight: 100;
+    font-weight: 300;
     text-wrap: wrap;
     text-align: left;
     margin: 0 3.5rem;
@@ -698,4 +704,309 @@ footer{
     font-size: 1rem;
     font-weight: 100;
     text-align: justify;
+}
+/*                  RESPONSIVE                   */
+@media (width <=1200px) {
+    /* HEADER */
+    .logo h2{
+        font-size: 1.5rem;
+    }
+    /* FOOTER */
+    .horario div p{
+        font-size: .875rem;
+    }
+    .tel p{
+        font-size: .875rem;
+    }
+}
+@media (width <=1024px) {
+    /* HEADER */
+    .logo a{
+        width: 3.125rem;
+        height: 3.125rem;
+        aspect-ratio: 1/1;
+    }
+    .logo h2{
+        font-size: 1.125rem;
+    }
+    /* FOOTER */
+    .icons{
+        border-width: .125rem 0 0 0;
+    }
+    .icons-img{
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+    .info-ubicacion{
+        font-size: .875rem;
+    }
+    .tel{
+        flex-direction: column;
+        justify-content: end;
+    }
+    .horario{
+        flex-direction: column;
+        justify-content: end;
+    }
+    .horario div p{
+        font-size: .75rem;
+    }
+    .tel p{
+        font-size: .75rem;
+    }
+    .tel img{
+        margin:0;
+    }
+    .horario img{
+        margin: 0;
+    }
+    /* EQUIPO */
+    .equipo-titulo{
+        margin-top: 5%;
+    }
+    .equipo-container p{
+        margin: 0 15%;
+    }
+    .texto-columnas{
+        margin: 0 2% 2% 2%;
+    }
+}
+@media(width <=900px){
+    nav{
+        flex-direction: column;
+        justify-content: center;
+        height: fit-content;
+    }
+    .logo{
+        width: 100%;
+        margin: 2% 0;
+        justify-content: center;
+    }
+    .accesos{
+        border-style: solid;
+        border-color: #505050;
+        border-width: .125rem 0 0 0;
+        width: 90%;
+        margin: 0 5% 2% 5%;
+        padding-top: 2%;
+        font-size: 1rem;
+    }
+}
+@media (width <=768px){
+    /* FOOTER */
+    footer{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr .5fr 1fr;
+        grid-template-areas:
+        "ubicacion ubicacion"
+        "tel-horario tel-horario"
+        "icons icons"
+        ;
+        align-items: center;
+        justify-items: center;
+        height: auto;
+    }
+    .mapa{
+        grid-column: 1;
+        grid-row: 1;
+        visibility: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    .info-ubicacion{
+        text-align: center;
+        justify-self: center;
+        align-self: center;
+        margin: 0;
+        padding: 0;
+    }
+    .horario div p{
+        font-size: .625rem;
+    }
+    .tel p{
+        font-size: .625rem;
+    }
+    .tel{
+        width: 50%;
+    }
+    .horario{
+        width: 50%;
+    }
+    .icon-mapa{
+        visibility:visible;
+        display: inline-block;
+    }
+    /* ACUERDOS */
+    .acuerdos-titulo{
+        margin-top: 5%;
+    }
+    .acuerdos-container details{
+        width: 100%;
+        margin:.125rem;
+        border-width: .1875rem 0;
+    }
+    .acuerdos-container summary{
+        font-size: 1.25rem;
+    }
+    .acuerdos-container h3{
+        font-size: 1rem;
+    }
+    .acuerdos-container h4{
+        font-size: .875rem;
+    }
+    .acuerdos-container p{
+        font-size: .875rem;
+    }
+    .acuerdos-lista li{
+        font-size: .875rem;
+    }
+    /* EQUIPO */
+    .equipo-container details{
+        width: 100%;
+        margin:.125rem;
+        border-width: .1875rem 0;
+    }
+    .equipo-container summary{
+        font-size: 1.25rem;
+    }
+    .equipo-container h3{
+        font-size: 1rem;
+    }
+    .equipo-container h4{
+        font-size: .875rem;
+    }
+    .equipo-container p{
+        font-size: .875rem;
+        margin: 0 15%;
+    }
+    .equipo-lista li{
+        font-size: .875rem;
+    }
+}
+@media(width <=425px){
+    /* HEADER */
+    .logo{
+        width: 100%;
+        margin: 2% 0;
+        justify-content: center;
+    }
+    .logo a{
+        width: 1.875rem;
+        height: 1.875rem;
+        aspect-ratio: 1/1;
+    }
+    .logo h2{
+        font-size: .875rem;
+    }
+    .accesos{
+        border-style: solid;
+        border-color: #505050;
+        border-width: .125rem 0 0 0;
+        width: 90%;
+        margin: 0 5% 2% 5%;
+        padding-top: 2%;
+        font-size: .75rem;
+    }
+    /* FOOTER */
+    .horario div p{
+        font-size: .5rem;
+    }
+    .tel p{
+        font-size: .5rem;
+    }
+    .tel-horario{
+        width: 100%;
+    }
+    /* ACUERDOS */
+    .acuerdos-titulo{
+        font-size: 1.125rem;
+    }
+    .acuerdos-container{
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+    }
+    .acuerdos-lista li{
+        margin: 0 1.875rem;
+    }
+    .acuerdos-container details{
+        margin:.0625rem;
+    }
+    .acuerdos-container summary{
+        font-size: .875rem;
+    }
+    .acuerdos-container h3{
+        font-size: .875rem;
+    }
+    .acuerdos-container h4{
+        font-size: .6875rem;
+    }
+    .acuerdos-container p{
+        font-size: .6875rem;
+        margin: 0 1.875rem;
+    }
+    .acuerdos-lista li{
+        font-size: .6875rem;
+    }
+    /* EQUIPO */
+    .equipo-titulo{
+        font-size: 1.125rem;
+    }
+    .equipo-container{
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+    }
+    .equipo-lista li{
+        margin: 0 1.875rem;
+    }
+    .equipo-container details{
+        margin:.0625rem;
+    }
+    .equipo-container summary{
+        font-size: .875rem;
+    }
+    .equipo-container h3{
+        font-size: .875rem;
+    }
+    .equipo-container h4{
+        font-size: .6875rem;
+    }
+    .equipo-container p{
+        font-size: .6875rem;
+        margin: 0 1.875rem;
+    }
+    .equipo-lista li{
+        font-size: .6875rem;
+    }
+}
+@media(width <=320px){
+    /* HEADER */
+    footer{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr .5fr 1fr .5fr;
+        grid-template-areas:
+        "ubicacion"
+        "tel-horario"
+        "tel-horario"
+        "icons"
+        ;
+    }
+    .tel-horario{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 75%;
+    }
+    .horario{
+        width: 100%;
+    }
+    /* ACUERDOS */
+    .acuerdos-container summary{
+        font-size: .75rem;
+    }
+    /* EQUIPO */
+    .equipo-container summary{
+        font-size: .75rem;
+    }
 }
