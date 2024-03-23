@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');     /*Fuente Noto*/
 *{
     margin: 0;
     padding: 0;
@@ -6,10 +7,9 @@
 body{
     background: url(../assets/img/background.jpg) repeat center center;
     
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');     /*Fuente Noto*/
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 100;
+    font-weight: 400;
     font-style: normal;
     font-size: 1.25rem;
     line-height: 1.6875rem;
@@ -78,7 +78,7 @@ ul{
 /* PÁGINA PRINCIPAL */
                                                     /* Sección de bienvenida */
 .bienvenida{
-    margin-top: 5%;
+    margin-top: 10%;
 }
 .bienvenida-container{
     display: flex;
@@ -218,6 +218,7 @@ ul{
     opacity: .75;
     transition: opacity ease 250ms;
 }
+/* Utilización de hover para los botones del slider */
 .slider-nav a:hover{
     opacity: 1;
 }
@@ -327,13 +328,18 @@ ul{
 }
 /* PIE DE PÁGINA */
 footer{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
     width: 100%;
-    height: auto;
-    position: relative;
-    bottom: 0;
-
+    height: 25vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "map ubicacion tel-horario tel-horario"
+        "map ubicacion icons icons"
+    ;
+    align-items: center;
+    justify-items: center;
+    
     border-style: solid;
     border-color: transparent;
     border-width: .25rem .25rem 0rem .25rem;
@@ -344,68 +350,73 @@ footer{
     background-origin: border-box;
     background-clip: content-box, border-box;
 }
-.ubicacion{
-    margin: 3% 0 3% 11.5%;
-    width: 50vw;
-    display: flex;
-    align-items: center;
-    column-gap: 1.5rem;
-}
 .info-ubicacion{
+    grid-area: ubicacion;
+    justify-self: flex-start;
+    margin-left: 5%;
     display: flex;
     flex-direction: column;
-    row-gap: 2.875rem;
 }
 .mapa{
+    grid-area: map;
     aspect-ratio: 1/1;
     width: 40%;
-    height: auto;
+    justify-self: end;
+    margin-right: 5%;
 
     border-radius: 1.25rem;
-    border: .125rem solid rgb(10, 10, 10);
+    border: .125rem solid rgb(100, 100, 100);
 }
-.info-contacto{
-    margin: 3% 11.5% 3% 0;
-    width: 50vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.icon-mapa{
+    grid-column: 1;
+    grid-row: 1/3;
+    justify-self: end;
+    visibility: hidden;
 }
 .tel-horario{
+    grid-area: tel-horario;
+    width: 90%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
 }
 .tel{
     display: flex;
     align-items: center;
-    margin-bottom: 5%;
+}
+.tel img{
+    margin-right: 5%;
 }
 .tel p{
-    margin-left: 5.2%;
     font-size: 1.125rem;
+    text-wrap: nowrap;
 }
 .horario{
     display: flex;
     align-items: center;
 }
-.horario div{
-    margin-left: 5.2%;
+.horario img{
+    margin-right: 5%;
 }
 .horario div p{
-    font-size: 1.125rem
+    font-size: 1.125rem;
+    text-wrap: nowrap;
 }
 .icons{
+    grid-area: icons;
+    width: 90%;
     display: flex;
     justify-content: space-around;
     padding-top: 1.65%;
 
     border-style: solid; 
-    border-color:rgb(10, 10, 10);
+    border-color:rgb(110, 110, 110);
     border-width: .25rem 0 0 0;
 }
 .icons-img{
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 1.875rem;
+    height: 1.875rem;
 }
 /* PÁGINA EQUIPO */
 .equipo-titulo{
