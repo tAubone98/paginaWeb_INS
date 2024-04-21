@@ -1,0 +1,11 @@
+@mixin borde($grosor, $radio){
+    border-style: solid;
+    border-color: transparent;
+    border-width: $grosor;
+    border-radius: $radio;
+    background-image:                                                     /*borde con gradiente de color, creado a partir del fondo*/
+        linear-gradient(#e6e6e6,#e6e6e6),
+        linear-gradient(to right, $rojoINS,$azulINS,$verdeINS);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}

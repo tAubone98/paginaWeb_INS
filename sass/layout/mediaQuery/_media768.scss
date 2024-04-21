@@ -1,0 +1,104 @@
+@media (max-width:768px){
+    /* FOOTER */
+    footer{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr .5fr 1fr;
+        grid-template-areas:
+        "ubicacion ubicacion"
+        "tel-horario tel-horario"
+        "icons icons"
+        ;
+        align-items: center;
+        justify-items: center;
+        height: auto;
+    }
+    .mapa{
+        grid-column: 1;
+        grid-row: 1;
+        visibility: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    .info-ubicacion{
+        text-align: center;
+        justify-self: center;
+        align-self: center;
+        margin: 0;
+        padding: 0;
+    }
+    .horario div p{
+        font-size: .625rem;
+    }
+    .tel{
+        width: 50%;
+        p{
+            font-size: .625rem;
+        }
+    }
+    .horario{
+        width: 50%;
+    }
+    .icon-mapa{
+        visibility:visible;
+        display: inline-block;
+    }
+    /* ACUERDOS */
+    .acuerdos-titulo{
+        margin-top: 5%;
+    }
+    .acuerdos-container {
+        details{
+            width: 100%;
+            margin:.125rem;
+            border-width: .1875rem 0;
+        }
+        summary{
+            font-size: 1.25rem;
+        }
+        h3{
+            font-size: 1rem;
+        }
+        h4{
+            font-size: .875rem;
+        }
+        p{
+            font-size: .875rem;
+        }
+    }
+    .acuerdos-lista li{
+        font-size: .875rem;
+    }
+    /* EQUIPO */
+    .equipo-container{
+        details{
+            width: 100%;
+            margin:.125rem;
+            border-width: .1875rem 0;
+        }
+        summary{
+            font-size: 1.25rem;
+        }
+        h3{
+            font-size: 1rem;
+        }
+        h4{
+            font-size: .875rem;
+        }
+        p{
+            font-size: .875rem;
+            margin: 0 15%;
+        }
+    }
+    .equipo-lista li{
+        font-size: .875rem;
+    }
+    /*PROPUESTA*/
+    .propuesta-info {
+        p{
+            font-size: .875rem;
+        }
+        ul li{
+            font-size: .875rem;
+        }
+    }
+}

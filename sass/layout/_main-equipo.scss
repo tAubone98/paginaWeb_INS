@@ -1,0 +1,53 @@
+/* PÁGINA EQUIPO */
+.equipo-titulo{
+    margin-top: 10%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: .625rem;
+}
+.equipo-container{
+    margin: 2% 10% 6% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    details{
+        width: 100%;
+        margin-bottom: 2%;
+    
+        @include borde(.25rem 0, 3.125rem);
+    }
+    summary{
+        font-size: 1.5;
+        font-weight: 600;
+        text-align: justify;
+        margin: 2% 0 2% 5%;
+    }
+    h3{
+        font-size: 1.25rem;
+        font-weight: 400;
+        text-align: center;
+        margin: .3125rem 0;
+    }
+    h4{
+        font-size: 1rem;
+        font-weight: 300;
+        text-align: center;
+        text-decoration: underline;
+    }
+    p{
+        font-size: 1rem;
+        font-weight: 300;
+        text-align: justify;
+        margin: 0 30%;
+    }
+}
+.texto-columnas{
+    margin: 0 15% 2% 15%;
+    display: flex;
+    justify-content: space-around;
+    div{
+        width: 50%;
+    }
+}

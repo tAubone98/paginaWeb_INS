@@ -1,0 +1,84 @@
+/* PIE DE PÁGINA */
+footer{
+    display: grid;
+    width: 100%;
+    height: 25vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "map ubicacion tel-horario tel-horario"
+        "map ubicacion icons icons"
+    ;
+    align-items: center;
+    justify-items: center;
+    
+    @include borde(.25rem 0 0 0, none);
+}
+.info-ubicacion{
+    grid-area: ubicacion;
+    justify-self: flex-start;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+}
+.mapa{
+    grid-area: map;
+    aspect-ratio: 1/1;
+    width: 40%;
+    justify-self: end;
+    margin-right: 5%;
+
+    border-radius: 1.25rem;
+    border: .125rem solid rgb(100, 100, 100);
+}
+.tel-horario{
+    grid-area: tel-horario;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    align-items: flex-end;
+}
+.tel{
+    display: flex;
+    align-items: center;
+    img{
+        grid-area:tel;
+        margin-right: 5%;
+    }
+    p{
+        font-size: 1rem;
+        text-wrap: nowrap;
+    }
+}
+.horario{
+    grid-area:horario;
+    display: flex;
+    align-items: center;
+    img{
+        margin-right: 5%;
+    }
+    div p{
+        font-size: 1rem;
+        text-wrap: nowrap;
+    }
+}
+.icons{
+    grid-area: icons;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.65%;
+
+    border-style: solid; 
+    border-color:rgb(110, 110, 110);
+    border-width: .25rem 0 0 0;
+}
+.icon-mapa{
+    visibility: hidden;
+    display: none;
+}
+.icons-img{
+    width: 1.875rem;
+    height: 1.875rem;
+}

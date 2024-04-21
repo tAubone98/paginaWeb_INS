@@ -1,0 +1,61 @@
+/* HEADER Y BARRA DE NAVEGACIÓN */
+header{
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    height: auto;
+
+    @include borde(0 0 .25rem 0, none);
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100px;
+    }
+}
+.logo{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    padding: 0 4%;
+    a{
+        width: 3.75rem;
+        height: 3.75rem;
+        aspect-ratio: 1/1;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    h2{
+        font-size: 1.75rem;
+        margin-left: 8%;
+        justify-self: end;
+        text-wrap:balance;
+        color: rgb(10, 10, 10);
+    }
+    h2::first-letter{
+        color: $rojoINS;
+    }
+}
+.letraN{
+    color: $azulINS;
+}
+.letraS{
+    color: $verdeINS;
+}
+ul{
+    list-style-type: none;
+}
+.accesos{
+    width: 70%;
+    margin: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    li a{
+        text-decoration: none;
+        color: rgb(10, 10, 10);
+    }
+}

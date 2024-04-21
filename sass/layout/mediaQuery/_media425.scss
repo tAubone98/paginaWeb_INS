@@ -1,0 +1,100 @@
+@media(max-width:425px){
+    /* HEADER */
+    .logo{
+        width: 100%;
+        margin: 2% 0;
+        justify-content: center;
+        a{
+            width: 1.875rem;
+            height: 1.875rem;
+            aspect-ratio: 1/1;
+        }
+        h2{
+            font-size: .875rem;
+        }
+    }
+    .accesos{
+        border-style: solid;
+        border-color: #505050;
+        border-width: .125rem 0 0 0;
+        width: 90%;
+        margin: 0 5% 2% 5%;
+        padding-top: 2%;
+        font-size: .75rem;
+    }
+    /* FOOTER */
+    .horario div p{
+        font-size: .5rem;
+    }
+    .tel p{
+        font-size: .5rem;
+    }
+    .tel-horario{
+        width: 100%;
+    }
+    /* ACUERDOS */
+    .acuerdos-titulo{
+        font-size: 1.125rem;
+    }
+    .acuerdos-container{
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+        details{
+            margin:.0625rem;
+        }
+        summary{
+            font-size: .875rem;
+        }
+        h3{
+            font-size: .875rem;
+        }
+        h4{
+            font-size: .6875rem;
+        }
+        p{
+            font-size: .6875rem;
+            margin: 0 1.875rem;
+        }
+    }
+    .acuerdos-lista li{
+        margin: 0 1.875rem;
+        font-size: .6875rem;
+    }
+    /* EQUIPO */
+    .equipo-titulo{
+        font-size: 1.125rem;
+    }
+    .equipo-container{
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+        details{
+            margin:.0625rem;
+        }
+        summary{
+            font-size: .875rem;
+        }
+        h3{
+            font-size: .875rem;
+        }
+        h4{
+            font-size: .6875rem;
+        }
+        p{
+            font-size: .6875rem;
+            margin: 0 1.875rem;
+        }
+    }
+    .equipo-lista li{
+        margin: 0 1.875rem;
+        font-size: .6875rem;
+    }
+    /*PROPUESTA*/
+    p{
+        font-size: .6875rem;
+    }
+    ul li{
+        font-size: .6875rem;
+    }
+}

@@ -1,0 +1,56 @@
+@media (max-width:1024px) {
+    /* HEADER */
+    .logo{
+        a{
+            width: 3.125rem;
+            height: 3.125rem;
+            aspect-ratio: 1/1;
+        }
+        h2{
+            font-size: 1.125rem;
+        }
+    }
+    /* FOOTER */
+    .icons{
+        border-width: .125rem 0 0 0;
+    }
+    .icons-img{
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+    .info-ubicacion{
+        font-size: .875rem;
+    }
+    .tel{
+        flex-direction: column;
+        justify-content: end;
+    }
+    .horario{
+        flex-direction: column;
+        justify-content: end;
+        div p{
+            font-size: .75rem;
+        }
+        img{
+            margin: 0;
+        }
+    }
+    .tel{
+        p{
+            font-size: .75rem;
+        }
+        img{
+            margin:0;
+        }
+    }
+    /* EQUIPO */
+    .equipo-titulo{
+        margin-top: 5%;
+    }
+    .equipo-container p{
+        margin: 0 15%;
+    }
+    .texto-columnas{
+        margin: 0 2% 2% 2%;
+    }
+}
