@@ -93,6 +93,11 @@
         font-size: .875rem;
     }
     /*PROPUESTA*/
+    .propuesta-carrusel-msg{
+        h3{
+            font-size: 1.25rem;
+        }
+    }
     .propuesta-info {
         p{
             font-size: .875rem;
@@ -100,5 +105,46 @@
         ul li{
             font-size: .875rem;
         }
+    }
+    /* INDEX */
+    .bienvenida-container{
+        height: 21.875rem;
+    }
+    .bienvenida-msg{
+        @include borde(.125rem, 1.5625rem);
+        h1{
+            font-size: 1rem;
+            margin-top: 10%;
+        }
+        p{
+            visibility: hidden;
+            font-size: 0;
+        }
+    }
+    .novedades-msg{
+        h3{
+            font-size: 1.25rem;
+        }
+        p{
+            font-size: .75rem;
+        }
+    }
+    .organizacion-texto{
+        h3{
+            font-size: 1.25rem;
+        }
+    }
+    .organizacion-btn{
+        a{
+            font-size: 1rem;
+        }
+    }
+    /* NOVEDADES */
+    .novedades-contenido{
+        height: 200px;
+        @include borde(.25rem, 3.125rem);
+    }
+    .novedades-img{
+        @include borde(.25rem, 3.125rem);
     }
 }

@@ -6,7 +6,6 @@
     }
     .logo{
         width: 100%;
-        margin: 2% 0;
         justify-content: center;
     }
     .accesos{
@@ -17,5 +16,22 @@
         margin: 0 5% 2% 5%;
         padding-top: 2%;
         font-size: 1rem;
+    }
+    /* NOVEDADES */
+    .noticia{
+        p{
+            font-size: 1.125rem;
+        }
+    }
+    .novedades-contenido{
+        height: 15.625rem;
+    }
+    .novedades-texto{
+        h3{
+            font-size: 1.125rem;
+        }
+        p{
+            font-size: .875rem;
+        }
     }
 }

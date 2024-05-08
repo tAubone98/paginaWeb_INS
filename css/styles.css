@@ -17,13 +17,23 @@ body {
   font-size: 1.25rem;
   line-height: 1.6875rem; }
 
+*::-webkit-scrollbar {
+  width: .75rem; }
+
+*::-webkit-scrollbar-track {
+  background: rgba(230, 230, 230, 0.1); }
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(15, 98, 172, 0.75);
+  border-radius: 1.25rem; }
+
 /*layout*/
 /* HEADER Y BARRA DE NAVEGACIÓN */
 header {
   position: sticky;
   top: 0;
   z-index: 5;
-  height: auto;
+  height: fit-content;
   border-style: solid;
   border-color: transparent;
   border-width: 0 0 0.25rem 0;
@@ -36,13 +46,14 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 100px; }
+    height: fit-content; }
 
 .logo {
   width: 30%;
   display: flex;
   align-items: center;
-  padding: 0 4%; }
+  padding: 0 4%;
+  margin: 2% 0; }
   .logo a {
     width: 3.75rem;
     height: 3.75rem;
@@ -167,10 +178,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 6.25rem;
-  margin-bottom: 6.25rem;
   width: 100%;
-  height: 44.3125rem;
+  height: 43.75rem;
   border-style: solid;
   border-color: transparent;
   border-width: 0.25rem 0 0.25rem 0;
@@ -181,13 +190,15 @@ footer {
 
 .bienvenida-container-img {
   display: flex;
+  align-items: center;
+  justify-content: center;
   height: 80%;
   width: 80%;
   overflow: hidden;
   position: relative;
   border-style: solid;
   border-color: transparent;
-  border-width: 0.25rem;
+  border-width: 0.25rem 0;
   border-radius: 2.5rem;
   background-image: linear-gradient(#e6e6e6, #e6e6e6), linear-gradient(to right, #ED3237, #0F62AC, #05A155);
   background-origin: border-box;
@@ -204,16 +215,15 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   background-color: #e6e6e6;
-  width: 42.5rem;
-  height: 9.0625rem;
+  width: 50%;
+  height: 25%;
   z-index: 2;
   justify-self: flex-start;
   align-self: flex-end;
   position: relative;
-  margin-left: 1.25rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2%;
   border-style: solid;
   border-color: transparent;
   border-width: 0.25rem;
@@ -222,14 +232,12 @@ footer {
   background-origin: border-box;
   background-clip: content-box, border-box; }
   .bienvenida-msg h1 {
-    margin-left: 2.5rem;
     font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: .625rem; }
+    font-weight: 600; }
   .bienvenida-msg p {
     text-wrap: balance;
-    margin-left: 2.5rem;
-    font-size: 1.25rem; }
+    font-size: 1.25rem;
+    text-align: center; }
 
 /* Sección Novedades */
 .novedades {
@@ -361,12 +369,6 @@ footer {
     font-size: 1.5rem;
     font-weight: 600;
     text-align: center; }
-  .organizacion-texto p {
-    margin: 2%;
-    line-height: 1.375rem;
-    font-size: 1rem;
-    text-align: justify;
-    text-wrap: balance; }
 
 .organizacion-btn {
   border-radius: .625rem .625rem 1.25rem 1.25rem;
@@ -485,7 +487,7 @@ footer {
     background-origin: border-box;
     background-clip: content-box, border-box; }
     .propuesta-info article div {
-      margin: 2% 10%; }
+      margin: 2%; }
   .propuesta-info div p {
     font-size: 1rem;
     font-weight: 300;
@@ -502,7 +504,7 @@ footer {
 
 /* NOVEDADES */
 .novedades-titulo {
-  margin-top: 10%;
+  margin-top: 5%;
   text-align: center;
   text-wrap: balance;
   font-size: 1.5rem;
@@ -535,11 +537,11 @@ footer {
   background-clip: content-box, border-box; }
 
 .novedades-img {
-  width: 18.75rem;
-  height: 18.75rem;
+  aspect-ratio: 1/1;
+  height: 100%;
   position: relative;
-  left: 10%;
-  bottom: 20%;
+  left: 5%;
+  bottom: 15%;
   border-style: solid;
   border-color: transparent;
   border-width: 0.25rem;
@@ -556,12 +558,11 @@ footer {
   width: 55%; }
   .novedades-texto h3 {
     font-size: 1.25rem;
-    font-weight: 600;
-    text-align: justify; }
+    font-weight: 600; }
   .novedades-texto p {
     font-size: 1rem;
-    font-weight: 100;
-    text-align: justify; }
+    font-weight: 300;
+    text-align: left; }
 
 /* PÁGINA ACUERDOS */
 .acuerdos-titulo {
@@ -628,7 +629,14 @@ footer {
   .horario div p {
     font-size: .875rem; }
   .tel p {
-    font-size: .875rem; } }
+    font-size: .875rem; }
+  /* INDEX */
+  .bienvenida-container {
+    height: 31.25rem; }
+  .bienvenida-msg h1 {
+    font-size: 1.125rem; }
+  .bienvenida-msg p {
+    font-size: 14px; } }
 
 @media (max-width: 1024px) {
   /* HEADER */
@@ -675,7 +683,6 @@ footer {
     height: fit-content; }
   .logo {
     width: 100%;
-    margin: 2% 0;
     justify-content: center; }
   .accesos {
     border-style: solid;
@@ -684,7 +691,16 @@ footer {
     width: 90%;
     margin: 0 5% 2% 5%;
     padding-top: 2%;
-    font-size: 1rem; } }
+    font-size: 1rem; }
+  /* NOVEDADES */
+  .noticia p {
+    font-size: 1.125rem; }
+  .novedades-contenido {
+    height: 15.625rem; }
+  .novedades-texto h3 {
+    font-size: 1.125rem; }
+  .novedades-texto p {
+    font-size: .875rem; } }
 
 @media (max-width: 768px) {
   /* FOOTER */
@@ -752,13 +768,85 @@ footer {
   .equipo-lista li {
     font-size: .875rem; }
   /*PROPUESTA*/
+  .propuesta-carrusel-msg h3 {
+    font-size: 1.25rem; }
   .propuesta-info p {
     font-size: .875rem; }
   .propuesta-info ul li {
-    font-size: .875rem; } }
+    font-size: .875rem; }
+  /* INDEX */
+  .bienvenida-container {
+    height: 21.875rem; }
+  .bienvenida-msg {
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0.125rem;
+    border-radius: 1.5625rem;
+    background-image: linear-gradient(#e6e6e6, #e6e6e6), linear-gradient(to right, #ED3237, #0F62AC, #05A155);
+    background-origin: border-box;
+    background-clip: content-box, border-box; }
+    .bienvenida-msg h1 {
+      font-size: 1rem;
+      margin-top: 10%; }
+    .bienvenida-msg p {
+      visibility: hidden;
+      font-size: 0; }
+  .novedades-msg h3 {
+    font-size: 1.25rem; }
+  .novedades-msg p {
+    font-size: .75rem; }
+  .organizacion-texto h3 {
+    font-size: 1.25rem; }
+  .organizacion-btn a {
+    font-size: 1rem; }
+  /* NOVEDADES */
+  .novedades-contenido {
+    height: 200px;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0.25rem;
+    border-radius: 3.125rem;
+    background-image: linear-gradient(#e6e6e6, #e6e6e6), linear-gradient(to right, #ED3237, #0F62AC, #05A155);
+    background-origin: border-box;
+    background-clip: content-box, border-box; }
+  .novedades-img {
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0.25rem;
+    border-radius: 3.125rem;
+    background-image: linear-gradient(#e6e6e6, #e6e6e6), linear-gradient(to right, #ED3237, #0F62AC, #05A155);
+    background-origin: border-box;
+    background-clip: content-box, border-box; } }
+
+@media (max-width: 650px) {
+  .novedades-contenido {
+    flex-direction: column;
+    align-items: center;
+    height: fit-content; }
+  .novedades-img {
+    width: 80%;
+    height: auto;
+    margin: 5% 0;
+    left: 0;
+    bottom: 0; }
+  .novedades-texto {
+    width: 80%; }
+    .novedades-texto h3 {
+      text-align: center; }
+    .novedades-texto p {
+      text-align: center;
+      margin: 0 0 5% 0; } }
 
 @media (max-width: 425px) {
   /* HEADER */
+  header {
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0 0 0.125rem 0;
+    border-radius: none;
+    background-image: linear-gradient(#e6e6e6, #e6e6e6), linear-gradient(to right, #ED3237, #0F62AC, #05A155);
+    background-origin: border-box;
+    background-clip: content-box, border-box; }
   .logo {
     width: 100%;
     margin: 2% 0;
@@ -778,6 +866,14 @@ footer {
     padding-top: 2%;
     font-size: .75rem; }
   /* FOOTER */
+  footer {
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0.125rem 0 0 0;
+    border-radius: none;
+    background-image: linear-gradient(#e6e6e6, #e6e6e6), linear-gradient(to right, #ED3237, #0F62AC, #05A155);
+    background-origin: border-box;
+    background-clip: content-box, border-box; }
   .horario div p {
     font-size: .5rem; }
   .tel p {
@@ -830,7 +926,54 @@ footer {
   p {
     font-size: .6875rem; }
   ul li {
-    font-size: .6875rem; } }
+    font-size: .6875rem; }
+  /* INDEX */
+  .bienvenida-container {
+    height: 12.5rem;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0.125rem 0 0.125rem 0;
+    border-radius: none;
+    background-image: linear-gradient(#e6e6e6, #e6e6e6), linear-gradient(to right, #ED3237, #0F62AC, #05A155);
+    background-origin: border-box;
+    background-clip: content-box, border-box; }
+  .bienvenida-container-img {
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0.125rem 0;
+    border-radius: 2.5rem;
+    background-image: linear-gradient(#e6e6e6, #e6e6e6), linear-gradient(to right, #ED3237, #0F62AC, #05A155);
+    background-origin: border-box;
+    background-clip: content-box, border-box; }
+  .bienvenida-msg h1 {
+    font-size: .75rem;
+    margin-top: 15%; }
+  .slider-container {
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0.125rem;
+    border-radius: 5rem 2.5rem;
+    background-image: linear-gradient(#e6e6e6, #e6e6e6), linear-gradient(to right, #ED3237, #0F62AC, #05A155);
+    background-origin: border-box;
+    background-clip: content-box, border-box; }
+  .novedades-msg h3 {
+    font-size: 1rem; }
+  .novedades-msg p {
+    visibility: hidden;
+    font-size: 0; }
+  .organizacion {
+    margin-top: 3%;
+    flex-direction: column;
+    align-items: center; }
+    .organizacion article {
+      width: 80%;
+      margin-top: 2%;
+      border-width: .125rem; }
+      .organizacion article img {
+        border-width: .125rem; }
+  /* NOVEDADES */
+  .noticia p {
+    font-size: 1rem; } }
 
 @media (max-width: 320px) {
   /* HEADER */
@@ -847,7 +990,12 @@ footer {
     width: 100%; }
   /* ACUERDOS */
   .acuerdos-container summary {
-    font-size: .75rem; }
+    font-size: .75rem;
+    /*PROPUESTA*/ }
+    .acuerdos-container summary p {
+      font-size: .5625rem; }
+    .acuerdos-container summary ul li {
+      font-size: .5625rem; }
   /* EQUIPO */
   .equipo-container summary {
     font-size: .75rem; } }

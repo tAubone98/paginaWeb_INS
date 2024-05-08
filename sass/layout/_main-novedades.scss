@@ -1,6 +1,6 @@
 /* NOVEDADES */
 .novedades-titulo{
-    margin-top: 10%;
+    margin-top: 5%;
     text-align: center;
     text-wrap: balance;
     font-size: 1.5rem;
@@ -29,11 +29,11 @@
     @include borde(.25rem, 5rem);
 }
 .novedades-img{
-    width: 18.75rem;
-    height: 18.75rem;
+    aspect-ratio: 1/1;
+    height: 100%;
     position: relative;
-    left: 10%;
-    bottom: 20%;
+    left: 5%;
+    bottom: 15%;
 
     @include borde(.25rem, 5rem);
 }
@@ -46,11 +46,10 @@
     h3{
         font-size: 1.25rem;
         font-weight: 600;
-        text-align: justify;
     }
     p{
         font-size: 1rem;
-        font-weight: 100;
-        text-align: justify;
+        font-weight: 300;
+        text-align: left;
     }
 }

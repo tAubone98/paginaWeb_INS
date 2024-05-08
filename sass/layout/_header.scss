@@ -3,7 +3,7 @@ header{
     position: sticky;
     top: 0;
     z-index: 5;
-    height: auto;
+    height: fit-content;
 
     @include borde(0 0 .25rem 0, none);
     nav{
@@ -11,7 +11,7 @@ header{
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        height: 100px;
+        height: fit-content;
     }
 }
 .logo{
@@ -19,6 +19,7 @@ header{
     display: flex;
     align-items: center;
     padding: 0 4%;
+    margin: 2% 0;
     a{
         width: 3.75rem;
         height: 3.75rem;

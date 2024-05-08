@@ -1,5 +1,8 @@
 @media(max-width:425px){
     /* HEADER */
+    header{
+        @include borde(0 0 .125rem 0, none);
+    }
     .logo{
         width: 100%;
         margin: 2% 0;
@@ -23,6 +26,9 @@
         font-size: .75rem;
     }
     /* FOOTER */
+    footer{
+        @include borde(.125rem 0 0 0, none);
+    }
     .horario div p{
         font-size: .5rem;
     }
@@ -96,5 +102,50 @@
     }
     ul li{
         font-size: .6875rem;
+    }
+    /* INDEX */
+    .bienvenida-container{
+        height: 12.5rem;
+        @include borde(.125rem 0 .125rem 0, none);
+    }
+    .bienvenida-container-img{
+        @include borde(.125rem 0, 2.5rem);
+    }
+    .bienvenida-msg{
+        h1{
+            font-size: .75rem;
+            margin-top: 15%;
+        }
+    }
+    .slider-container{
+        @include borde(.125rem,5rem 2.5rem);
+    }
+    .novedades-msg{
+        h3{
+            font-size: 1rem;
+        }
+        p{
+            visibility: hidden;
+            font-size: 0;
+        }
+    }
+    .organizacion{
+        margin-top: 3%;
+        flex-direction: column;
+        align-items: center;
+        article{
+            width: 80%;
+            margin-top: 2%;
+            border-width: .125rem;
+            img{
+                border-width: .125rem;
+            }
+        }
+    }
+    /* NOVEDADES */
+    .noticia{
+        p{
+            font-size: 1rem;
+        }
     }
 }

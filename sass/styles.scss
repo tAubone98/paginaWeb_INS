@@ -7,6 +7,7 @@
 /*base*/
 @import "./base/reset";
 @import "./base/background-general";
+@import "./base/scrollbar-general";
 /*layout*/
 @import "./layout/header";
 @import "./layout/footer";
@@ -20,5 +21,6 @@
 @import "./layout/mediaQuery/media1024";
 @import "./layout/mediaQuery/media900";
 @import "./layout/mediaQuery/media768";
+@import "./layout/mediaQuery/media650";
 @import "./layout/mediaQuery/media425";
 @import "./layout/mediaQuery/media320";

@@ -1,0 +1,24 @@
+@media (max-width:650px){
+    .novedades-contenido{
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+    }
+    .novedades-img{
+        width: 80%;
+        height: auto;
+        margin: 5% 0;
+        left: 0;
+        bottom: 0;
+    }
+    .novedades-texto{
+        width: 80%;
+        h3{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+            margin: 0 0 5% 0;
+        }
+    }
+}
